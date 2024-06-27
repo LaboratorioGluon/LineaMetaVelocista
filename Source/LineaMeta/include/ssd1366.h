@@ -43,4 +43,19 @@
 // Charge Pump (pg.62)
 #define OLED_CMD_SET_CHARGE_PUMP        0x8D    // follow with 0x14
 
+
+#include "ssd1366.h"
+
+#include <stdint.h>
+
+#define SDA_PIN GPIO_NUM_6
+#define SCL_PIN GPIO_NUM_7
+
+void i2c_master_init();
+void ssd1306_init();
+void task_ssd1306_display_clear(void *ignore);
+void task_ssd1306_contrast(void *ignore);
+void task_ssd1306_scroll(void *ignore);
+void task_ssd1306_display_text(const void *arg_text, uint8_t start_line);
+
 #endif /* MAIN_SSD1366_H_ */
