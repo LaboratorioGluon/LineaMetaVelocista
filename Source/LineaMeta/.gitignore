@@ -5,5 +5,5 @@
 .vscode/ipch
 
 
-**/*.zip
+**/git*.zip
 **/#*#
